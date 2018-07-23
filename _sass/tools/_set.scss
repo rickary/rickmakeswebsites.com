@@ -1,0 +1,66 @@
+//	Set
+//  ===
+
+// 	For:
+//	Just starting a couple of things off
+
+
+
+//	Box-Sizing
+//	Clearfix
+//	Images
+
+
+
+
+
+//------------------------------------//
+//  Box-Sizing
+//------------------------------------//
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  	  -ms-box-sizing: border-box;
+  	      box-sizing: border-box;
+}
+
+
+
+
+
+//------------------------------------//
+//  Clearfix
+//------------------------------------//
+
+header, 
+footer, 
+main, 
+div, 
+section, 
+article, 
+nav, 
+dl, 
+ul, 
+ol, 
+aside, 
+blockquote {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+
+
+//------------------------------------//
+//  Clearfix
+//------------------------------------//
+
+img {
+	max-width: 100%;
+	width: 100%;
+}
