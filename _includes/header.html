@@ -7,4 +7,25 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/master.css?v0.1">
 </head>
-<body>
+
+{% if page.section == "website" %}
+  <body class="s-website">
+{% else if page.section == "developer" %}
+  <body class="s-developer">
+{% endif %}
+
+  <header class="p-header">
+    <div class="b-container">
+      <nav class="p-header__nav">
+        <ul class="b-nav">
+          <li>I need a</li>
+          {% if page.section != "website" %}
+            <li><a href="/i-need-a-website/" class="b-btn b-btn--small b-btn--web">website</a></li>
+          {% endif %}
+          {% if page.section != "developer" %}
+            <li><a href="/i-need-a-developer/" class="b-btn b-btn--small b-btn--dev">developer</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </header>
