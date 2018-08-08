@@ -1,0 +1,27 @@
+.p-wysiwyg {
+
+  h1, h2, h3, h4, h5 {
+    margin-bottom: 1em;
+  }
+  
+  h2 {
+    @include font-size-l();
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  a {
+    transition: all 0.1s ease-in-out;
+  }
+
+  p a {
+    border-bottom: solid 1px currentColor;
+
+    &:hover {
+      border-bottom: none;
+      color: $color-blue;
+    }
+  }
+}

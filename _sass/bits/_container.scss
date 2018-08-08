@@ -6,5 +6,26 @@
 	width: 100%;
 	max-width: $bp-max;
 	margin: 0 auto;
-	padding: 0 $gutter;
+	padding: 0 50px;
+
+	@include mq($bp-desktop) {
+		padding: 0 100px;
+	}
+}
+
+.b-flex {
+	display: flex;
+	&:before, &:after { display: none;}
+
+	&.is-full-height {
+		min-height: calc(100vh - 86px);
+		padding: 64px 0 150px 0;
+	}
+}
+
+	.s-home .b-flex.is-full-height { min-height: 100vh;}
+
+.b-flex--center {
+	justify-content: center;
+	flex-direction: column;
 }

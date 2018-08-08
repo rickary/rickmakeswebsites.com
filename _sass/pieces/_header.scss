@@ -10,5 +10,13 @@
 //------------------------------------//
 
 .p-header {
-	
+	padding: 25px 0;
+}
+
+.p-header__nav {
+  float: right;
+
+  li:not(:last-child) {
+    margin-right: 10px;
+  }
 }

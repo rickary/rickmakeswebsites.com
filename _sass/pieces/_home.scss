@@ -1,0 +1,93 @@
+.p-home-container {
+  max-width: 750px;
+}
+
+
+.p-home-title {
+  @include font-size-xxl;
+
+  font-weight: $font-weight-bold;
+  margin-bottom: 25px;
+
+  @include mq($bp-tablet) {
+    margin-bottom: 50px;
+  }
+
+  @include mq(599px, max) {
+    text-align: center;
+  }
+
+  @include mq(450px, max) {
+    @include font-size(34);
+  }
+}
+
+.p-home-btns {
+  margin-bottom: 25px;
+
+  @include mq(599px, max) {
+    text-align: center;
+  }
+
+  li {
+    @include mq(600px) {
+      width: calc(50% - 25px);
+    }
+    
+  }
+
+  li:first-child {
+
+    @include mq(600px) {
+      margin-right: 20px;
+    }
+
+    @include mq($bp-tablet) {
+      margin-right: 40px;
+    }
+  }
+
+  .b-btn {
+    width: 100%;
+    
+    @include mq(599px, max) {
+      margin-bottom: 12px;
+      width: 250px;
+    }
+  }
+}
+
+.p-home-helper-trigger {
+  @include font-size-s();
+
+  opacity: 1;
+  text-align: center;
+  transition: opacity .3s ease-in-out;
+
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
+.p-home-helper {
+  border-color: $color-pink;
+  height: 0;
+  overflow: hidden;
+
+  p, h2 {
+    opacity: 0;
+    transition: all 1s .5s ease-in-out;
+  }
+
+  transition: all .4s .1s ease-in-out;
+
+  &.is-active {
+    border: solid 4px $color-pink;
+    height: auto;
+    padding: 20px;
+
+    p, h2 {
+      opacity: 1;
+    }
+  }
+}

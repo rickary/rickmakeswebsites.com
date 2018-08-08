@@ -10,5 +10,35 @@
 //------------------------------------//
 
 .p-footer {
+  margin-bottom: 25px;
+  margin-top: 100px;
+  text-align: center;
+}
 
+.p-footer__title {
+  font-weight: $font-weight-bold;
+  margin-bottom: 6px;
+}
+
+.p-footer__nav {
+  display: block;
+  list-style: none;
+  margin-bottom: 50px;
+
+  li {
+    display: block;
+  }
+
+  a {
+    border-bottom: solid 1px white;
+    display: inline-block;
+
+    &:hover {
+      border-bottom: solid 1px currentColor;
+    }
+  }
+}
+
+.p-footer__copy {
+  @include font-size-xs;
 }

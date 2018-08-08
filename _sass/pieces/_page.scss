@@ -1,0 +1,29 @@
+.p-page__title {
+  @include font-size-xl();
+  font-weight: $font-weight-bold;
+  margin-bottom: 50px;
+}
+
+  .s-website    .p-page__title span  { color: $color-blue;}
+  .s-developer  .p-page__title span  { color: $color-pink;}
+
+
+.p-page__btns {
+  max-width: 600px;
+}
+
+.p-page__btns__intro {
+  font-weight: $font-weight-bold;
+  margin-bottom: 25px;
+}
+
+.p-page__btns__grid {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+
+  .b-btn {
+    width: 100%;
+  }
+}
