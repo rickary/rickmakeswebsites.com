@@ -20,11 +20,6 @@
 .b-flex {
 	display: flex;
 	&:before, &:after { display: none;}
-
-	&.is-full-height {
-		min-height: calc(100vh - 86px);
-		padding: 64px 0 150px 0;
-	}
 }
 
 	.s-home .b-flex.is-full-height { min-height: 100vh;}
