@@ -17,8 +17,16 @@
 }
 
 @mixin font-size-xl {
-	@include font-size(56);
+	@include font-size(44);
 	line-height: 1.25;
+
+	@include mq($bp-tablet) {
+		@include font-size(48);
+	}
+
+	@include mq($bp-desktop) {
+		@include font-size(56);
+	}
 }
 
 @mixin font-size-l {

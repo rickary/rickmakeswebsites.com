@@ -10,13 +10,45 @@
 //------------------------------------//
 
 .p-header {
-	padding: 25px 0;
+  padding: 25px;
+  text-align: center;
+  
+  @include mq(700px) {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.p-header__title {
+  line-height: 32px;
+
+  @include mq(699px, max) {
+    display: block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 10px;
+  }
 }
 
 .p-header__nav {
-  float: right;
-
   li:not(:last-child) {
     margin-right: 10px;
+  }
+}
+
+.s-none .p-header__nav {
+  @include mq(430px, max) {
+    text-align: center;
+
+    li:first-child {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  @include mq(350px, max) {
+    .b-btn--small {
+      padding: 0 20px;
+    }
   }
 }

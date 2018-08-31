@@ -1,11 +1,24 @@
 .p-wysiwyg {
 
+  > h2:first-child {
+    margin-top: 0;
+  }
+
   h1, h2, h3, h4, h5 {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    margin-top: 1em;
   }
   
   h2 {
     @include font-size-l();
+  }
+
+  h3 {
+    @include font-size-m();
+    font-weight: $font-weight-bold;
   }
 
   p {
@@ -22,6 +35,16 @@
     &:hover {
       border-bottom: none;
       color: $color-blue;
+    }
+  }
+
+  ol,
+  ul:not(.p-page__btns__grid) {
+    margin-bottom: 1em;
+    margin-left: 2em;
+
+    li:not(:last-child) {
+      margin-bottom: .5em;
     }
   }
 }
