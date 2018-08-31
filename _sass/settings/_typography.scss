@@ -2,8 +2,10 @@
 //  Families
 //------------------------------------//
 
-$font-family                    : Helvetica, Arial, sans-serif;
-$heading-font-family 			: Helvetica, sans-serif;	
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+$font-family              : 'Muli', sans-serif;
+$heading-font-family 			: 'Muli', sans-serif;
 
 
 
@@ -24,8 +26,8 @@ $line-height               		: 1.5;
 //  Weights
 //------------------------------------//
 
-$font-weight 					: normal;
-$font-weight-bold 				: bold;
+$font-weight 					: 400;
+$font-weight-bold 		: 700;
 
 
 

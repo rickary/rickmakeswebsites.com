@@ -1,4 +1,42 @@
 ---
-layout: default
+layout: home
 title: Rick Makes Websites
 ---
+
+<div class="b-container">
+  <div class="b-flex b-flex--center p-home-container is-full-height">
+    <h1 class="p-home-title">Hi, I’m Rick. <br /> I make websites.</h1>
+
+    <ul class="b-nav p-home-btns">
+      <li><a href="/i-need-a-website" class="b-btn b-btn--large b-btn--web">I need a website</a></li>
+      <li><a href="/i-need-a-developer" class="b-btn b-btn--large b-btn--dev">I need a developer</a></li>
+    </ul>
+
+    
+    <p class="p-home-helper-trigger js-helperTrigger">I don’t know! <a href="#">What do I need?</a></p>
+
+    <div class="p-home-helper p-wysiwyg js-helper">
+      <h2>What do you need?</h2>
+
+      <p>I make websites for businesses of all kinds of shapes and sizes.</p>
+      <p>Some of these are simple 'brochure' or marketing sites with blogs etc. others are online shops and there are a few that a little more complicated, with custom built features and applications.</p>
+    
+      <p><b>If you’re looking for someone to make you a website, refresh your old site, or if you’re just looking for some advice then choose <a href="/i-need-a-website/">I need a website</a>.</b></p>
+      
+      <p>I also collaborate with designers and digital agencies to help out on specific projects.</p>
+
+      <p><b>If you’re looking for an extra pair of hands then choose <a href="i-need-a-developer/">I need a developer</a>.</b></p>
+    </div>
+      
+  </div>
+</div>
+
+<script>
+  var helperTrigger = document.querySelector('.js-helperTrigger');
+
+  helperTrigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.js-helper').classList.toggle('is-active');
+    helperTrigger.classList.toggle('is-hidden');      
+  });
+</script>

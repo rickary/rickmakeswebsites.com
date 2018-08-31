@@ -17,7 +17,7 @@
 //  Config
 //------------------------------------//
 
-$use-buttons            : false !default;
+$use-buttons            : true !default;
 
 
 
@@ -34,12 +34,14 @@ $use-buttons            : false !default;
     //------------------------------------//
 
     .b-btn {
+        cursor: pointer;
         display: inline-block;
-        vertical-align: middle;
-        white-space: nowrap;
         font-family: inherit;
         font-size: 100%;
-        cursor: pointer;
+        text-align: center;
+        transition: all 0.1s ease-in-out;
+        vertical-align: middle;
+        white-space: nowrap;
         
         &, &:hover {
             text-decoration: none;      // [9]
@@ -52,4 +54,100 @@ $use-buttons            : false !default;
         }
     }
 
+
+    .b-btn--small {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 30px;
+    }
+
+    .b-btn--normal {
+        font-size: 18px;
+        height: 54px;
+        line-height: 54px;
+        padding: 0 30px;
+    }
+
+    .b-btn--large {
+        font-size: 18px;
+        height: 54px;
+        line-height: 54px;
+        padding: 0 10px;
+
+        @include mq($bp-desktop) {
+            padding: 0 30px;
+        }
+
+        @include mq($bp-desktop) {
+            font-size: 26px;
+            height: 70px;
+            line-height: 70px;
+            padding: 0 50px;
+        }
+    }
+
+    .b-btn--normal {
+        border: solid 2px currentColor;
+    }
+
+        .s-website .b-btn--normal { 
+            border-color: $color-green;
+
+            &:hover {
+                background: $color-green;
+            }
+        }
+
+        .s-developer .b-btn--normal {
+            border-color: $color-orange;
+
+            &:hover {
+                background: $color-orange;
+                color: white;
+            }
+        }
+
+    .b-btn--fill {
+        border: solid 2px currentColor;
+    }
+
+        .s-website .b-btn--fill {
+            background: $color-green;
+            border-color: $color-green;
+
+            &:hover {
+                background: none;
+            }
+        }
+
+        .s-developer .b-btn--fill {
+            background: $color-orange;
+            border-color: $color-orange;
+            color: white;
+
+            &:hover {
+                background: none;
+                color: $color-text;
+            }
+        }
+
+    .b-btn--web {
+        background: linear-gradient(to right, $color-blue , $color-green);
+        //box-shadow: 0 0 5px 0 $color-blue;
+        color: white;
+
+        &:hover {
+            box-shadow: 0 0 5px 0px $color-green;
+        }
+    }
+
+    .b-btn--dev {
+        background: linear-gradient(to right, $color-pink , $color-orange);
+       // box-shadow: 0 0 5px 0 $color-pink;
+        color: white;
+
+        &:hover {
+            box-shadow: 0 0 5px 0px $color-orange;
+        }
+    }
 }

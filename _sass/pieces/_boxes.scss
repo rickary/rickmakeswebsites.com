@@ -1,0 +1,15 @@
+.p-box {
+  background: $color-body;
+  border-radius: 5px;
+  border-top: solid 5px $color-blue;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+  .p-box--positive {
+    border-color: $color-positive;
+  }
+
+  .p-box--negative {
+    border-color: $color-negative;
+  }

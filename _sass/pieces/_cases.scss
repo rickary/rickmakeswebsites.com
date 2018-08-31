@@ -1,0 +1,95 @@
+.p-case {
+  border-bottom: solid 1px $color-text;
+  display: grid;
+  grid-gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+
+  @include mq(600px) {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mq(900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.p-case__title {
+  @include font-size-l();
+  font-weight: $font-weight-bold;
+
+  @include mq(600px) {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+
+  @include mq(900px) {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+}
+
+.p-case__intro {
+  @include mq(600px) {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  @include mq(900px) {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+}
+
+  .p-case__img {
+    margin-bottom: 10px;
+    max-width: 400px;
+  }
+
+  .p-case__quote {
+    background: $color-body;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .p-case__intro__meta {
+    @include font-size-xs();
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .p-case__intro__date {
+    @include font-size-xs();
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .p-case__intro__link {
+    @include font-size-xs();
+    display: inline-block;
+
+    &:hover {
+      border-bottom: solid 1px currentColor;
+    }
+  }
+
+.p-case__problem {
+
+  @include mq(900px) {
+    grid-column: 2/3;
+    grid-row: 2;
+  }
+}
+
+.p-case__solution {
+  
+
+  @include mq(900px) {
+    grid-column: 3/4;
+    grid-row: 2;
+  }
+}

@@ -1,0 +1,50 @@
+.p-page__title {
+  @include font-size-xl();
+  font-weight: $font-weight-bold;
+  margin-bottom: 50px;
+}
+
+  .s-website    .p-page__title span  { color: $color-blue;}
+  .s-developer  .p-page__title span  { color: $color-pink;}
+
+
+.p-page__btns {
+}
+
+.p-page__btns__intro {
+  font-weight: $font-weight-bold;
+  margin-bottom: 25px;
+}
+
+.p-page__btns__grid {
+  display: grid;
+  grid-gap: 10px;
+ 
+  list-style: none;
+
+  .b-btn {
+    width: 100%;
+  }
+
+  @include mq(600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.p-page__btns__grid__btn--large {
+  
+
+  @include mq(600px) {
+    grid-column: 1/3;
+  }
+}
+
+.p-page__btns__grid__btn--full {
+  grid-column: 1/4;
+}
+
+.p-page__btns-list {
+  li:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
