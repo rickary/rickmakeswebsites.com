@@ -32,7 +32,6 @@
 }
 
 .p-page__btns__grid__btn--large {
-  
 
   @include mq(600px) {
     grid-column: 1/3;

@@ -111,7 +111,8 @@ $use-buttons            : true !default;
         border: solid 2px currentColor;
     }
 
-        .s-website .b-btn--fill {
+        .s-website .b-btn--fill,
+        .s-none .b-b-btn--fill {
             background: $color-green;
             border-color: $color-green;
 
